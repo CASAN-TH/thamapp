@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -13,6 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ShopPage } from '../pages/shop/shop';
 import { MePage } from '../pages/me/me';
 import { ProductPage } from '../pages/product/product';
+import { AdsserviceProvider } from '../providers/adsservice/adsservice';
+import { ProductServiceProvider } from '../providers/product-service/product-service';
+import { AdsPage } from '../pages/ads/ads';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { ProductPage } from '../pages/product/product';
     TabsPage,
     ShopPage,
     MePage,
-    ProductPage
+    ProductPage,
+    AdsPage
   ],
   imports: [
     BrowserModule,
@@ -38,12 +43,15 @@ import { ProductPage } from '../pages/product/product';
     TabsPage,
     ShopPage,
     MePage,
-    ProductPage
+    ProductPage,
+    AdsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AdsserviceProvider,
+    ProductServiceProvider
   ]
 })
 export class AppModule {}

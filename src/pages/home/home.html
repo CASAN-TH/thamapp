@@ -10,109 +10,49 @@
       <ion-slides autoplay="1000" loop="true" speed="3000">
 
 
-        <ion-slide>
-          <img src="https://medthai.com/wp-content/uploads/2014/07/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%891.jpg">
+        <ion-slide *ngFor="let item of adsData" (click)="adsClick(item._id)">
+          <img [src]="item.img">
         </ion-slide>
 
-        <ion-slide>
-          <img src="https://www.dekthaidd.com/FileUpload/imgUpload/images/20170801_knowledge.jpg">
-        </ion-slide>
 
-        <ion-slide>
-          <img src="http://4.bp.blogspot.com/-bfAuucUFMKY/UORiKwtr2xI/AAAAAAAAAB0/8YV5ZA1ylgA/s1600/fruitvege.png">
-        </ion-slide>
 
       </ion-slides>
     </ion-col>
   </ion-row>
 
   <h2 padding>สินค้าแนะนำ</h2>
-    <ion-scroll scrollX="true">
-      <ion-card class="scroll-item">
+  <ion-scroll scrollX="true">
+    <ion-card class="scroll-item" *ngFor="let item of productData.raccomments">
 
-        <img src="http://www.nooknan.com/wp-content/uploads/2017/10/M_172-1461754024.jpg">
+      <img [src]="item.img">
 
-
-
-        <ion-item>
-          <h2 text-wrap>ผักกาดขาว</h2>
-          <p>90฿/แพ็ค</p>
-        </ion-item>
+      <ion-item>
+        <h2 text-wrap>ผักกาดขาว</h2>
+        <p>90฿/แพ็ค</p>
+      </ion-item>
 
 
 
-      </ion-card>
-      <ion-card class="scroll-item">
+    </ion-card>
 
-        <img src="http://s.isanook.com/me/0/ud/0/1751/tomato.jpg">
+  </ion-scroll>
 
+  <h2 padding>สินค้าใหม่</h2>
+  <ion-scroll scrollX="true">
+    <ion-card class="scroll-item" *ngFor="let item of productData.productNews">
 
-        <ion-item text-wrap>
-          <h2>มะเขือเทศ</h2>
-          <p>30฿/ก.ก.</p>
-        </ion-item>
-
+      <img [src]= "item.img">
 
 
-      </ion-card>
-      <ion-card class="scroll-item">
-
-        <img src="https://www.organicbook.com/wp-content/uploads/2017/04/%E0%B8%A1%E0%B8%B0%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B8%AD%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87-300x199.jpg">
-
-
-        <ion-item text-wrap>
-          <h2>มะเขือม่วง</h2>
-          <p>20฿/ก.ก.</p>
-        </ion-item>
+      <ion-item>
+        <h2 text-wrap>พริกหวาน</h2>
+        <p>90฿/แพ็ค</p>
+      </ion-item>
 
 
 
-      </ion-card>
-    </ion-scroll>
-
-    <h2 padding>สินค้าใหม่</h2>
-    <ion-scroll scrollX="true">
-      <ion-card class="scroll-item">
-
-        <img src="http://sukkaphap-d.com/wp-content/uploads/2016/10/sweet-pepper.jpg">
-
-
-
-        <ion-item>
-          <h2 text-wrap>พริกหวาน</h2>
-          <p>90฿/แพ็ค</p>
-        </ion-item>
-
-
-
-      </ion-card>
-      <ion-card class="scroll-item">
-
-        <img src="http://1.bp.blogspot.com/-Gle_1mXeZbo/U-m8-wa3UgI/AAAAAAAAFoo/bsOpFIPz-JI/s1600/Passion-fruit-scoopfw600.gif">
-
-
-        <ion-item text-wrap>
-          <h2>เสาวรส</h2>
-          <p>30฿/ก.ก.</p>
-        </ion-item>
-
-
-
-      </ion-card>
-      <ion-card class="scroll-item">
-
-        <img src="http://www.yesspathailand.com/images/column_1265536602/Strawberry-1.jpg">
-
-
-        <ion-item text-wrap>
-          <h2>สตรอเบอรี่</h2>
-          <p>20฿/ก.ก.</p>
-        </ion-item>
-
-
-
-      </ion-card>
-    </ion-scroll>
+    </ion-card>
+  </ion-scroll>
 
 
 
