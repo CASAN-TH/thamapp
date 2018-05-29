@@ -19,10 +19,20 @@
       </ion-slides>
     </ion-col>
   </ion-row>
+  <ion-row>
+    <ion-col>
+      <h2 padding>สินค้าแนะนำ</h2>
+    </ion-col>
+    <ion-col>
 
-  <h2 padding>สินค้าแนะนำ</h2>
+      <ion-item no-lines (click)="productListClick(productData.raccomments)">
+        <p item-end>see all</p>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
   <ion-scroll scrollX="true">
-    <ion-card class="scroll-item" *ngFor="let item of productData.raccomments">
+    <ion-card class="scroll-item" *ngFor="let item of productData.raccomments" (click)="productClick(item)">
 
       <img [src]="item.img">
 
@@ -37,11 +47,22 @@
 
   </ion-scroll>
 
-  <h2 padding>สินค้าใหม่</h2>
-  <ion-scroll scrollX="true">
-    <ion-card class="scroll-item" *ngFor="let item of productData.productNews">
+  <ion-row>
+    <ion-col>
+      <h2 padding>สินค้าใหม่</h2>
+    </ion-col>
+    <ion-col>
 
-      <img [src]= "item.img">
+      <ion-item no-lines (click)="productListClick(productData.productNews)">
+        <p item-end>see all</p>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
+  <ion-scroll scrollX="true">
+    <ion-card class="scroll-item" *ngFor="let item of productData.productNews" (click)="productClick(item)">
+
+      <img [src]="item.img">
 
 
       <ion-item>

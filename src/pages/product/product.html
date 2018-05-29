@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -7,26 +6,6 @@
 
 </ion-header>
 
-
-<ion-content class="card-background-page">
-<ion-card >
-  <img src="http://megawecare.co.th/contentdata/health/health63_020161030143708_1140.jpg"/>
-  <div class="card-title">ผัก</div>
-</ion-card>
-<ion-card >
-    <img src="https://www.bangkokbanksme.com/wp-content/uploads/2017/06/New_5660_V5.png"/>
-    <div class="card-title">ผลไม้</div>
-  </ion-card>
-  <ion-card >
-      <img src="https://wol.jw.org/th/wol/mp/r113/lp-si/yb16/2016/40"/>
-      <div class="card-title">เครื่องเทศ</div>
-    </ion-card>
-    <ion-card >
-        <img src="http://p3.isanook.com/c3/0/up/2015/12/1w3r.jpg"/>
-        <div class="card-title">สมุนไพร</div>
-      </ion-card>
-      <ion-card >
-          <img src="https://graphicbuffet.co.th/wp-content/uploads/2017/09/otop-1000x500.jpg"/>
-          <div class="card-title">สินค้าหนึ่งตำบล</div>
-        </ion-card>
+<ion-content padding>        
+          <img [src]="product.img">  {{product.name}} {{product.unitprice}} {{product.unitname}}
 </ion-content>

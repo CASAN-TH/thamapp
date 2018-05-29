@@ -17,6 +17,8 @@ import { ProductPage } from '../pages/product/product';
 import { AdsserviceProvider } from '../providers/adsservice/adsservice';
 import { ProductServiceProvider } from '../providers/product-service/product-service';
 import { AdsPage } from '../pages/ads/ads';
+import { ProductProvider } from '../providers/product/product';
+import { ProductListPage } from '../pages/product-list/product-list';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AdsPage } from '../pages/ads/ads';
     ShopPage,
     MePage,
     ProductPage,
-    AdsPage
+    AdsPage,
+    ProductListPage
   ],
   imports: [
     BrowserModule,
@@ -44,14 +47,16 @@ import { AdsPage } from '../pages/ads/ads';
     ShopPage,
     MePage,
     ProductPage,
-    AdsPage
+    AdsPage,
+    ProductListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AdsserviceProvider,
-    ProductServiceProvider
+    ProductServiceProvider,
+    ProductProvider
   ]
 })
 export class AppModule {}

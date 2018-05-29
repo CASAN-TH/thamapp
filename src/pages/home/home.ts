@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AdsserviceProvider } from '../../providers/adsservice/adsservice';
 import { ProductServiceProvider } from '../../providers/product-service/product-service';
 import { AdsPage } from '../ads/ads';
+import { ProductPage } from '../product/product';
+import { ProductListPage } from '../product-list/product-list';
 
 @Component({
   selector: 'page-home',
@@ -19,13 +21,21 @@ export class HomePage {
 
     });
 
-    this.productService.get().then((data)=>{
+    this.productService.get().then((data) => {
       console.log(data);
       this.productData = data;
     })
   }
-  adsClick(id){
+  adsClick(id) {
     console.log(id);
-    this.navCtrl.push(AdsPage,{id:id});
+    this.navCtrl.push(AdsPage, { id: id });
+  }
+  productClick(item) {
+    console.log(item);
+    this.navCtrl.push(ProductPage, { item: item });
+  }
+
+  productListClick(list) {
+    this.navCtrl.push(ProductListPage, { list: list });
   }
 }
