@@ -5,6 +5,7 @@ import { ProductServiceProvider } from '../../providers/product-service/product-
 import { AdsPage } from '../ads/ads';
 import { ProductPage } from '../product/product';
 import { ProductListPage } from '../product-list/product-list';
+import { CategoryServiceProvider } from '../../providers/category-service/category-service';
 
 @Component({
   selector: 'page-home',
@@ -13,7 +14,8 @@ import { ProductListPage } from '../product-list/product-list';
 export class HomePage {
   adsData = [];
   productData = {};
-  constructor(public navCtrl: NavController, private adsService: AdsserviceProvider, private productService: ProductServiceProvider) {
+  constructor(public navCtrl: NavController, private adsService: AdsserviceProvider, private productService: ProductServiceProvider,) {
+    
     this.adsService.list().then((data) => {
       console.log(data);
       this.adsData = data;
@@ -25,6 +27,7 @@ export class HomePage {
       console.log(data);
       this.productData = data;
     })
+   
   }
   adsClick(id) {
     console.log(id);

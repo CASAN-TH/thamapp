@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>product-cat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page" >
+  
+
+
+  <ion-card *ngFor="let item of categorylistData" (click)="categoryClick(item.name)">
+    
+    <ion-card>
+        <img [src]="item.img">
+        <div class="card-title">{{item.name}}</div>
+      </ion-card>
+   
+  </ion-card>
+
+ 
+   
+</ion-content>

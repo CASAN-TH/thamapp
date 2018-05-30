@@ -19,6 +19,8 @@ import { ProductServiceProvider } from '../providers/product-service/product-ser
 import { AdsPage } from '../pages/ads/ads';
 import { ProductProvider } from '../providers/product/product';
 import { ProductListPage } from '../pages/product-list/product-list';
+import { ProductCatPage } from '../pages/product-cat/product-cat';
+import { CategoryServiceProvider } from '../providers/category-service/category-service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ProductListPage } from '../pages/product-list/product-list';
     MePage,
     ProductPage,
     AdsPage,
-    ProductListPage
+    ProductListPage,
+    ProductCatPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { ProductListPage } from '../pages/product-list/product-list';
     MePage,
     ProductPage,
     AdsPage,
-    ProductListPage
+    ProductListPage,
+    ProductCatPage
   ],
   providers: [
     StatusBar,
@@ -56,7 +60,8 @@ import { ProductListPage } from '../pages/product-list/product-list';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AdsserviceProvider,
     ProductServiceProvider,
-    ProductProvider
+    ProductProvider,
+    CategoryServiceProvider
   ]
 })
 export class AppModule {}

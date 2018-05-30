@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { ShopPage } from '../shop/shop';
 import { MePage } from '../me/me';
 import { ProductPage } from '../product/product';
+import { ProductCatPage } from '../product-cat/product-cat';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -13,7 +14,7 @@ import { ProductPage } from '../product/product';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = ProductPage;
+  tab2Root = ProductCatPage;
   tab3Root = ShopPage;
   tab4Root = MePage;
   
