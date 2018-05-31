@@ -21,6 +21,8 @@ import { ProductProvider } from '../providers/product/product';
 import { ProductListPage } from '../pages/product-list/product-list';
 import { ProductCatPage } from '../pages/product-cat/product-cat';
 import { CategoryServiceProvider } from '../providers/category-service/category-service';
+import { ShopServiceProvider } from '../providers/shop-service/shop-service';
+import { ShopListPage } from '../pages/shop-list/shop-list';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { CategoryServiceProvider } from '../providers/category-service/category-
     ProductPage,
     AdsPage,
     ProductListPage,
-    ProductCatPage
+    ProductCatPage,
+    ShopListPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { CategoryServiceProvider } from '../providers/category-service/category-
     ProductPage,
     AdsPage,
     ProductListPage,
-    ProductCatPage
+    ProductCatPage,
+    ShopListPage
   ],
   providers: [
     StatusBar,
@@ -61,7 +65,8 @@ import { CategoryServiceProvider } from '../providers/category-service/category-
     AdsserviceProvider,
     ProductServiceProvider,
     ProductProvider,
-    CategoryServiceProvider
+    CategoryServiceProvider,
+    ShopServiceProvider
   ]
 })
 export class AppModule {}
